@@ -112,7 +112,9 @@ func main() {
 			Message:  msg,
 		}
 
-		FirebaseSend(ctx, client, data, "smart_garden")
+		if FErr == nil {
+			FirebaseSend(ctx, client, data, "smart_garden")
+		}
 
 		// print result
 		time.Sleep(time.Second)
