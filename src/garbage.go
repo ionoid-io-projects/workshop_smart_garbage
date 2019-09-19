@@ -48,6 +48,7 @@ func main() {
 		<-c
 		triPin.Low()
 		echoPin.Low()
+		InitRgbState()
 		os.Exit(0)
 	}()
 

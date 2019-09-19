@@ -58,7 +58,7 @@ func Orange() {
 	pinBlue.High()
 }
 
-func Init() {
+func InitRgbState() {
 	pinRed.Low()
 	pinGreen.Low()
 	pinBlue.Low()
