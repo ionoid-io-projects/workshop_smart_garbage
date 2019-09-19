@@ -40,5 +40,4 @@ func FirebaseSend(ctx context.Context, client *firestore.Client, data Dht11, col
 		fmt.Println("Failed to start firebase link, err: ", err)
 	}
 
-	defer client.Close()
 }

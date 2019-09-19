@@ -25,6 +25,9 @@ func main() {
 	if FErr != nil {
 		fmt.Println(FErr)
 	}
+
+	defer client.Close()
+
 	// end firebase init
 
 	// init distance to 3 cm
