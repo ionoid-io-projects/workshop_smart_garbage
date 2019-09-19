@@ -15,7 +15,9 @@ func main() {
 
 	// init rgb led
 	InitRgbLed()
-	isFull := 10
+
+	// init distance to 3 cm
+	isFull := 3
 
 	fmt.Println("opening gpio")
 	err := rpio.Open()
@@ -84,10 +86,10 @@ func main() {
 
 		if int(distance) > isFull {
 			Green()
-			fmt.Printf("Distance to be full: %d cm \n", (int(distance) - isFull))
+			fmt.Printf("Distance to be full: %d cm, distance value: %.f \n", (int(distance) - isFull), distance)
 		} else {
 			Red()
-			fmt.Printf("Garbage is full \n")
+			fmt.Printf("Garbage is full, %.f \n", distance)
 		}
 
 		// print result
