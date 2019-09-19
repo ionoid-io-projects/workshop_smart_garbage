@@ -1,5 +1,5 @@
 name: garbage-env
-version: 1.0
+version: 2.0
 apps:
     garbage-env:
         command:    /bin/garbage
