@@ -20,30 +20,9 @@ func main() {
 	// init rgb led
 	InitRgbLed()
 
-	// init firebase
-	projectId := os.Getenv("Project_id")
-	privateKeyId := os.Getenv("Private_key_id")
-	privateKey := os.Getenv("Private_key")
-	clientEmail := os.Getenv("Client_email")
-	clientId := os.Getenv("Client_id")
-	clientX509CertUrl := os.Getenv("Client_x509_cert_url")
-
-	config := CredentialsFile{
-		Type:                        "service_account",
-		Project_id:                  projectId,
-		Private_key_id:              privateKeyId,
-		Private_key:                 privateKey,
-		Client_email:                clientEmail,
-		Client_id:                   clientId,
-		Auth_uri:                    "https://accounts.google.com/o/oauth2/auth",
-		Token_uri:                   "https://oauth2.googleapis.com/token",
-		Auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-		Client_x509_cert_url:        clientX509CertUrl,
-	}
-
 	ctx := context.Background()
 
-	client, FErr := InitClient(ctx, config)
+	client, FErr := InitClient(ctx)
 	if FErr != nil {
 		log.Fatalln(FErr)
 	}

@@ -1,8 +1,7 @@
 package main
 
 import (
-	"encoding/json"
-	"log"
+	"fmt"
 
 	"cloud.google.com/go/firestore"
 	"golang.org/x/net/context"
@@ -17,24 +16,9 @@ type Dht11 struct {
 	Message  string  `firebase:"humidity,omotempty"`
 }
 
-type CredentialsFile struct {
-	Type                        string
-	Project_id                  string
-	Private_key_id              string
-	Private_key                 string
-	Client_email                string
-	Client_id                   string
-	Auth_uri                    string
-	Token_uri                   string
-	Auth_provider_x509_cert_url string
-	Client_x509_cert_url        string
-}
+func InitClient(ctx context.Context) (*firestore.Client, error) {
 
-func InitClient(ctx context.Context, config CredentialsFile) (*firestore.Client, error) {
-
-	// sa := option.WithCredentialsFile("./dht11-data-d25a6-serviceAccountKey.json")
-	jsonConfig, err := json.Marshal(config)
-	sa := option.WithCredentialsJSON(jsonConfig)
+	sa := option.WithCredentialsFile("./dht11-data-d25a6-serviceAccountKey.json")
 	app, err := firebase.NewApp(ctx, nil, sa)
 	if err != nil {
 		return nil, err
@@ -52,7 +36,8 @@ func FirebaseSend(ctx context.Context, client *firestore.Client, data Dht11, col
 
 	_, _, err := client.Collection(collection).Add(ctx, data)
 	if err != nil {
-		log.Fatalf("Failed adding alovelace: %v", err)
+		// log.Fatalf("Failed adding alovelace: %v", err)
+		fmt.Println("Failed to start firebase link, err: ", err)
 	}
 
 	defer client.Close()
