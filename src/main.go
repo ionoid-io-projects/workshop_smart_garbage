@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"os/signal"
 	"strconv"
@@ -24,7 +23,7 @@ func main() {
 
 	client, FErr := InitClient(ctx)
 	if FErr != nil {
-		log.Fatalln(FErr)
+		fmt.Println(FErr)
 	}
 	// end firebase init
 
