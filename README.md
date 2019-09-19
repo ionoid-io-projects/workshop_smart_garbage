@@ -1,9 +1,9 @@
-<!-- # workshop_soil moisture
+# workshop smart garbage
 Material for raspberry pi workshop
 
 # Wiring
 
-![Lighting an LED](doc/img/Irrigation.png)
+<!-- ![Lighting an LED](doc/img/Irrigation.png)
 
 |RELAY                | Raspberry pi                  |
 |-------------------|---------------------------------|
@@ -15,7 +15,7 @@ Material for raspberry pi workshop
 |-------------------|---------------------------------|
 |-                  | GND pin                         |
 |+                  | +5v pin                         |
-|Signal             | GPIO 21                         |
+|Signal             | GPIO 21                         | -->
 
 # Code
 
@@ -35,22 +35,22 @@ Follow the following instruction if you dont know how to connect to raspberry pi
 Assuming you're connected with... copy and past this command
 If you're using Raspberry zero
 ```
-curl -O https://raw.githubusercontent.com/ionoid-io-projects/workshop_smart_irrigation/master/bin/arm6/irrigation
+curl -O https://raw.githubusercontent.com/ionoid-io-projects/workshop_smart_garbage/master/bin/arm6/garbage
 ```
 
 If you're using Raspberry 3 b
 ```
-curl -O https://raw.githubusercontent.com/ionoid-io-projects/workshop_smart_irrigation/master/bin/arm7/irrigation
+curl -O https://raw.githubusercontent.com/ionoid-io-projects/workshop_smart_garbage/master/bin/arm7/garbage
 ```
 ## make it executable
 ```
-chmod +x irrigation
+chmod +x garbage
 ```
 
 ## 4- execute binary
 ```
-./irrigation
+./garbage
 ```
 
 ## How to stop the program
-To quit or stop the program click on **Ctrl+C** -->
+To quit or stop the program click on **Ctrl+C**
