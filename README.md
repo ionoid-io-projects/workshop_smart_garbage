@@ -1,17 +1,17 @@
 # workshop smart garbage
-Material for raspberry pi workshop
+Material for Raspberry Pi workshop
 
 # Wiring
 
 <!-- ![Lighting an LED](doc/img/Irrigation.png)
 
-|RELAY                | Raspberry pi                  |
+|RELAY                | Raspberry Pi                  |
 |-------------------|---------------------------------|
 |-                  | GND pin                         |
 |+                  | +5v pin                         |
 |Signal             | GPIO 11                         |
 
-|Soil Moisture      | Raspberry pi                  |
+|Soil Moisture      | Raspberry Pi                  |
 |-------------------|---------------------------------|
 |-                  | GND pin                         |
 |+                  | +5v pin                         |
@@ -30,7 +30,7 @@ You can achive it with connecting it to your pc trought the Micro USB Port of th
 ## 2- Connect to your raspberry pi
 Using putty if you're on windows, Ssh if you're on a linux based os
 Follow the following instruction if you dont know how to connect to raspberry pi
-[Connect to raspberry pi using Putty](https://github.com/ionoid-io-projects/workshop/blob/master/doc/od-iot-raspbian-rpi-zero-windows.md#5-first-boot)
+[Connect to Raspberry Pi using Putty](https://github.com/ionoid-io-projects/workshop/blob/master/doc/od-iot-raspbian-rpi-zero-windows.md#5-first-boot)
 
 ## 3- Download relay binary file
 
