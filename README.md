@@ -17,6 +17,8 @@ Material for raspberry pi workshop
 |+                  | +5v pin                         |
 |Signal             | GPIO 21                         | -->
 
+![wiring](doc/img/gpio.png)
+
 # Code
 
 ## 1- Power your raspberry
